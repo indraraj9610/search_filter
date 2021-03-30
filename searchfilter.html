@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>search-filter</title>
+<script>
+const search=()=>{
+let filter=document.getElementById("ram1").value.toUpperCase();
+let mytable=document.getElementById("ram");
+let tr=mytable.getElementsByTagName("tr");
+ for( var i=0;i<tr.length;i++)
+{
+let td=tr[i].getElementsByTagName('td')[0];
+if(td){
+let textvalue=td.textContent||td.innerHTML;
+if(textvalue.toUpperCase().indexOf(filter) > -1){
+tr[i].style.display="";
+}else{
+tr[i].style.display="none";}
+}}
+};
+</script>
+    </head>
+    <body>
+<input type="text" id="ram1" placeholder="sreach required name" onKeyup="search()">
+<table id="ram">
+<tr>
+<td>name</td>
+<td>Graduation</td>
+<td>post</td>
+</tr>
+<tr>
+<td>Vijay</td>
+<td>bba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Rajiv</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Sivani</td>
+<td>Bba</td>
+<td>Hr-manger</td>
+</tr>
+<tr>
+<td>Lalu</td>
+<td>b.com</td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>Ram</td>
+<td>bba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Syam</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Ratan</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Sasayank</td>
+<td>mba</td>
+<td>Hr-manager</td>
+
+</tr>
+<tr>
+<td>Raghunath</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Sivam</td>
+<td>mba</td>
+<td>post</td>
+</tr>
+<tr>
+<td>Jay</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Joshi</td>
+<td>bba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Salu</td>
+<td>bba</td>
+<td>Hr-manager</td>
+</tr>
+<tr>
+<td>Ritam</td>
+<td>mba</td>
+<td>Hr-manager</td>
+</tr>
+</table>
+</body>
+</html>
